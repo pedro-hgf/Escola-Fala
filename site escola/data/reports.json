@@ -1,0 +1,74 @@
+[
+    {
+        "id": "1",
+        "type": "racismo",
+        "description": "Durante a aula de história, um colega fez um comentário racista sobre um personagem histórico, e ninguém da turma interveio. Senti-me muito desconfortável.",
+        "approxDate": "2025-06-15",
+        "location": "Sala de aula 7",
+        "authorizePublication": true,
+        "evidenceUrl": ""
+    },
+    {
+        "id": "2",
+        "type": "bullying",
+        "description": "Fui alvo de piadas e exclusão no recreio por causa da minha aparência. Já é a terceira vez essa semana.",
+        "approxDate": "2025-07-17",
+        "location": "Pátio Principal",
+        "authorizePublication": true,
+        "evidenceUrl": ""
+    },
+    {
+        "id": "3",
+        "type": "lgbtfobia",
+        "description": "Ouvi um grupo de alunos fazendo comentários homofóbicos no corredor enquanto eu passava. Fiquei com medo de reagir.",
+        "approxDate": "2025-07-10",
+        "location": "Corredor do Bloco B",
+        "authorizePublication": true,
+        "evidenceUrl": "https://via.placeholder.com/400x300.png?text=Evidencia_LGBTfobia"
+    },
+    {
+        "id": "4",
+        "type": "assedio",
+        "description": "Um aluno mais velho tentou me tocar de forma inadequada durante a fila da merenda.",
+        "approxDate": "2025-07-05",
+        "location": "Cantina",
+        "authorizePublication": false,
+        "evidenceUrl": ""
+    },
+    {
+        "id": "5",
+        "type": "machismo",
+        "description": "O professor de educação física disse que meninas não são boas em futebol, desestimulando várias alunas a participarem do jogo.",
+        "approxDate": "2025-06-28",
+        "location": "Quadra de Esportes",
+        "authorizePublication": true,
+        "evidenceUrl": ""
+    },
+    {
+        "id": "6",
+        "type": "capacitismo",
+        "description": "Um colega fez piadas sobre a forma como um aluno com deficiência visual andava no pátio, imitando-o.",
+        "approxDate": "2025-07-12",
+        "location": "Pátio Externo",
+        "authorizePublication": true,
+        "evidenceUrl": ""
+    },
+    {
+        "id": "7",
+        "type": "outro",
+        "description": "Houve uma discussão muito agressiva entre dois grupos de alunos por motivos banais, e quase se agrediram fisicamente.",
+        "approxDate": "2025-07-16",
+        "location": "Entrada da escola",
+        "authorizePublication": true,
+        "evidenceUrl": ""
+    },
+    {
+        "id": "8",
+        "type": "racismo",
+        "description": "Em um trabalho em grupo, um colega me excluiu da discussão de ideias, dizendo que 'minha opinião não importava' por causa da minha cor de pele.",
+        "approxDate": "2025-07-18",
+        "location": "Biblioteca",
+        "authorizePublication": true,
+        "evidenceUrl": ""
+    }
+]
