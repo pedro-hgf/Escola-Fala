@@ -1,0 +1,984 @@
+/* General Styling */
+:root {
+    --primary-color: #0056b3; /* Darker blue for primary actions */
+    --secondary-color: #28a745; /* Green for secondary actions */
+    --tertiary-color: #ffc107; /* Yellow/Amber for help actions */
+    --text-color: #333;
+    --background-color: #d7d8da;
+    --light-gray: #d7d8da;
+    --white: #fff;
+    --font-family-poppins: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family-poppins);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.main-header {
+    background-color: var(--white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between logo and title */
+}
+
+.logo-placeholder {
+    width: 180px; /* Adjust as needed */
+    height: 160px; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* If you want a circular logo placeholder */
+    overflow: hidden;
+}
+
+.logo-placeholder img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.main-header h1 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--primary-color);
+}
+
+.menu-toggle {
+    display: none; /* Hidden on larger screens */
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(to right, var(--primary-color), #007bff); /* Gradient background */
+    color: var(--white);
+    padding: 80px 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+}
+
+.hero-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #004085;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: 2px solid var(--secondary-color);
+}
+
+.btn-secondary:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.btn-tertiary {
+    background-color: var(--tertiary-color);
+    color: var(--text-color);
+    border: 2px solid var(--tertiary-color);
+}
+
+.btn-tertiary:hover {
+    background-color: #e0a800;
+    transform: translateY(-2px);
+}
+
+/* Awareness Section */
+.awareness-section {
+    padding: 60px 0;
+    background-color: var(--light-gray);
+    text-align: center;
+}
+
+.awareness-section h3 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+}
+
+.awareness-section p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 15px auto;
+}
+
+/* Call to Action Section */
+.call-to-action-section {
+    padding: 60px 0;
+    background-color: var(--white);
+    text-align: center;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.call-to-action-section h3 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+}
+
+.call-to-action-section p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 15px auto 30px auto;
+}
+
+/* Footer */
+.main-footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto; /* Pushes the footer to the bottom */
+}
+
+.main-footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Form Section Specific Styling */
+.form-section {
+    padding: 60px 0;
+    background-color: var(--background-color);
+}
+
+.form-section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+}
+
+.report-form {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: var(--font-family-poppins);
+    font-size: 1rem;
+    color: var(--text-color);
+    transition: border-color 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="date"]:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.2);
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 120px;
+}
+
+.radio-group,
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.radio-group label,
+.checkbox-group label {
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.radio-group input[type="radio"],
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+    transform: scale(1.2); /* Make radio/checkbox slightly larger */
+}
+
+.hidden {
+    display: none;
+}
+
+.confirmation-message {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    font-size: 0.95rem;
+}
+
+.report-form .btn-primary {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
+
+/* Reports Section Specific Styling */
+.reports-section {
+    padding: 60px 0;
+    background-color: var(--background-color);
+}
+
+.reports-section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+}
+
+/* Filter Controls */
+.filter-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    gap: 15px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.filter-controls label {
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+.filter-controls select {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: var(--font-family-poppins);
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: var(--white);
+    transition: border-color 0.3s ease;
+    cursor: pointer;
+}
+
+.filter-controls select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.2);
+}
+
+/* Reports Grid */
+.reports-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px;
+    padding-bottom: 30px; /* Space above footer */
+}
+
+.report-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.report-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.report-card h3 {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    text-transform: capitalize; /* Capitalize type for display */
+}
+
+.report-card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 10px;
+    flex-grow: 1; /* Allows description to take up available space */
+}
+
+.report-card .report-meta {
+    font-size: 0.85rem;
+    color: #777;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed var(--light-gray);
+}
+
+.report-card .report-meta strong {
+    color: var(--text-color);
+}
+
+.no-reports-message,
+.loading-message {
+    text-align: center;
+    grid-column: 1 / -1; /* Center message across all columns */
+    font-size: 1.2rem;
+    color: #666;
+    padding: 50px 0;
+}
+
+/* Existing CSS should be above this */
+
+/* Footer General Styling */
+.main-footer {
+    background-color: var(--primary-color); /* Usando a cor primária definida */
+    color: var(--white);
+    padding: 30px 0; /* Aumenta o padding para mais espaço */
+    margin-top: auto; /* Garante que o rodapé fique no final da página */
+    text-align: center; /* Centraliza o texto por padrão */
+}
+
+.main-footer .footer-content {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as seções quebrem para a próxima linha em telas pequenas */
+    justify-content: space-around; /* Distribui o espaço entre as seções */
+    align-items: flex-start; /* Alinha o conteúdo ao topo de cada seção */
+    gap: 30px; /* Espaço entre as seções do rodapé */
+}
+
+.footer-section {
+    flex: 1; /* Faz as seções ocuparem o espaço disponível igualmente */
+    min-width: 280px; /* Largura mínima para cada seção antes de quebrar a linha */
+    padding: 15px; /* Adiciona um padding interno às seções */
+    background-color: rgba(14, 155, 68, 0.1); /* Um leve background para destacar as seções */
+    border-radius: 8px; /* Cantos arredondados */
+    text-align: center; /* Centraliza o texto dentro de cada seção */
+}
+
+.footer-section p {
+    margin-bottom: 15px; /* Espaço abaixo dos parágrafos */
+    font-size: 0.95rem; /* Tamanho de fonte ligeiramente maior */
+    line-height: 1.5;
+}
+
+.footer-section.school-info p {
+    font-weight: 600; /* Texto de copyright mais robusto */
+}
+
+.footer-section.creator-info p {
+    font-style: italic; /* Texto do criador em itálico */
+}
+
+
+/* Social Links Styling */
+.social-links {
+    display: flex;
+    justify-content: center; /* Centraliza os links sociais */
+    gap: 15px; /* Espaço entre os ícones sociais */
+    margin-top: 15px; /* Espaço acima dos links sociais */
+    flex-wrap: wrap; /* Permite que os links quebrem a linha */
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espaço entre o ícone e o texto */
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 500; /* Peso da fonte para o texto do link */
+    font-size: 0.9rem; /* Tamanho da fonte dos links */
+    padding: 8px 12px; /* Padding para cada link */
+    border-radius: 20px; /* Botões mais arredondados */
+    background-color: rgba(255, 255, 255, 0.15); /* Fundo sutil para os botões sociais */
+    transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Fundo mais escuro no hover */
+    transform: translateY(-3px); /* Efeito de 'subir' no hover */
+    color: var(--tertiary-color); /* Muda a cor do texto no hover para destacar */
+}
+
+.social-links img {
+    width: 20px; /* Tamanho dos ícones sociais */
+    height: 20px;
+    filter: invert(100%); /* Mantém os ícones brancos */
+}
+
+/* Responsive Adjustments for Footer */
+@media (max-width: 768px) {
+    .main-footer .footer-content {
+        flex-direction: column; /* Empilha as seções verticalmente em telas menores */
+        align-items: center; /* Centraliza as seções */
+        gap: 20px;
+    }
+
+    .footer-section {
+        min-width: unset; /* Remove a largura mínima para permitir flexibilidade */
+        width: 100%; /* Ocupa a largura total */
+        max-width: 400px; /* Limita a largura em telas médias para não ficar muito esticado */
+    }
+
+    .footer-section p {
+        font-size: 0.9rem;
+    }
+
+    .social-links {
+        flex-direction: column; /* Empilha os links sociais verticalmente em telas muito pequenas */
+        gap: 10px;
+    }
+
+    .social-links a {
+        width: 80%; /* Faz com que os botões sociais ocupem mais espaço */
+        max-width: 250px; /* Limita a largura máxima */
+        margin: 0 auto; /* Centraliza os botões */
+        font-size: 0.85rem;
+    }
+
+    .social-links img {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-footer {
+        padding: 20px 0;
+    }
+
+    .footer-section {
+        padding: 10px;
+    }
+}
+
+
+/* Hero Section for Ajuda Page */
+.hero-help-section {
+    background: linear-gradient(to right, #007bff, #0056b3); /* Similar to main hero */
+    color: var(--white);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero-help-section h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero-help-section p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+}
+
+.hero-help-section .btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+}
+
+/* Help Content Section */
+.help-content-section {
+    padding: 60px 0;
+    background-color: var(--light-gray);
+}
+
+.help-content-section h3 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+}
+
+.help-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Responsive grid for cards */
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.help-card {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.help-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.help-card h4 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Basic icons - you might replace with Font Awesome or similar */
+.help-card h4 i {
+    font-size: 1.8rem;
+    color: var(--secondary-color); /* Green icon color */
+}
+
+/* Placeholder for simple icons */
+.icon-phone::before { content: '📞'; }
+.icon-heart::before { content: '❤️'; }
+.icon-book::before { content: '📚'; }
+.icon-school::before { content: '🏫'; }
+.icon-external-link::before { content: '🔗'; }
+
+.help-card p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Allows text to take available space */
+}
+
+.help-card ul {
+    list-style: none; /* Remove default list style */
+    padding-left: 0;
+    margin-bottom: 15px;
+}
+
+.help-card ul li {
+    background-color: #f1f1f1;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.help-card ul li:last-child {
+    margin-bottom: 0;
+}
+
+.help-card .link-external {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s ease;
+}
+
+.help-card .link-external:hover {
+    color: #004085;
+    text-decoration: underline;
+}
+
+.help-card .link-external i {
+    font-size: 0.8rem; /* Smaller icon for links */
+}
+
+.final-message {
+    text-align: center;
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-top: 50px;
+}
+
+.final-message h3 {
+    font-size: 2rem;
+    color: var(--secondary-color); /* Green for positive message */
+    margin-bottom: 20px;
+}
+
+.final-message p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.btn-inline {
+    display: inline-flex; /* Use flex for icon alignment */
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-content {
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+
+    .main-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .main-nav {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        background-color: var(--white);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .main-nav.active {
+        max-height: 200px; /* Adjust based on your menu height */
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 20px;
+    }
+
+    .main-nav a {
+        display: block;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--light-gray);
+    }
+
+    .main-nav a:last-child {
+        border-bottom: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero-section {
+        padding: 60px 0;
+        min-height: 300px;
+    }
+
+    .hero-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn {
+        width: 80%; /* Make buttons wider on small screens */
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .awareness-section,
+    .call-to-action-section {
+        padding: 40px 0;
+    }
+
+    .awareness-section h3,
+    .call-to-action-section h3 {
+        font-size: 1.7rem;
+    }
+
+    /* Responsive adjustments for form */
+    .report-form {
+        padding: 30px;
+        margin: 0 15px; /* Add some side margin on smaller screens */
+    }
+
+    .form-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .form-group label {
+        font-size: 0.95rem;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="date"],
+    .form-group select,
+    .form-group textarea {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    /* Responsive adjustments for reports page */
+    .reports-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .filter-controls {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .filter-controls select {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .reports-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .report-card {
+        padding: 20px;
+    }
+
+    .report-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .report-card p {
+        font-size: 0.9rem;
+    }
+
+    /* Responsive Adjustments for Ajuda Page */
+    .hero-help-section {
+        padding: 60px 0;
+    }
+
+    .hero-help-section h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero-help-section p {
+        font-size: 1rem;
+    }
+
+    .help-content-section {
+        padding: 40px 0;
+    }
+
+    .help-content-section h3 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .help-card-grid {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+        gap: 20px;
+    }
+
+    .help-card {
+        padding: 25px;
+    }
+
+    .help-card h4 {
+        font-size: 1.3rem;
+    }
+
+    .help-card p {
+        font-size: 0.95rem;
+    }
+
+    .final-message {
+        padding: 30px;
+        margin-top: 30px;
+    }
+
+    .final-message h3 {
+        font-size: 1.6rem;
+    }
+
+    .final-message p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header h1 {
+        font-size: 1.3rem;
+    }
+
+    .logo-placeholder {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hero-section {
+        padding: 40px 0;
+    }
+
+    .hero-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+
+    .report-form {
+        padding: 20px;
+    }
+
+    .form-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .radio-group,
+    .checkbox-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .report-form .btn-primary {
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .filter-controls select {
+        width: 95%;
+    }
+
+    .reports-grid {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+        gap: 15px;
+    }
+
+    .hero-help-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-help-section .btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+
+    .help-content-section h3 {
+        font-size: 1.5rem;
+    }
+
+    .help-card h4 {
+        font-size: 1.2rem;
+        flex-direction: column; /* Stack icon and text */
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .help-card h4 i {
+        margin-bottom: 5px;
+    }
+}
